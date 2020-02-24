@@ -9,23 +9,24 @@ class Grid extends React.Component {
     }
 
     generateAllCells() {
-        const innerArray = Array(this.columns).fill(false);
-        const outerArray = Array(this.rows).fill(innerArray);
-        const finalGrid =[];
+        const outerArray = Array(this.rows);
 
-        outerArray.map((item, outerIndex) => {
-              item.map((innerItem, innerIndex) => {
-                finalGrid.push(<div className='cell' key={outerIndex+'-'+innerIndex}></div>)
-              })
-        })
+        for(let i = 0; i<outerArray.length; i++){
+            outerArray[i] = Array(this.columns)
+        }
 
-       
-        return finalGrid;
+        for(let i = 0 ; i<this.rows; i++) {
+            for(let j =0  ; j< this.columns ; j++) {
+                outerArray[i][j] = <div className='cell' key={i+'-'+j}></div>
+            }
+        }
+
+        return outerArray;
     }
 
     render() {
         return (
-            <div className='grid'>{this.generateAllCells()}</div>
+            <div className='grid'>{this.generateAllCells(this.rows, this.columns)}</div>
         )
     }
 }
