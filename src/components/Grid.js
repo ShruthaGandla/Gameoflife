@@ -2,22 +2,22 @@ import React from "react";
 import '../css/style.css'
 
 class Grid extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.rows = 100;
         this.columns = 100;
     }
 
-    generateAllCells() {
+    generateAllCells = () => {
         const outerArray = Array(this.rows);
 
-        for(let i = 0; i<outerArray.length; i++){
+        for (let i = 0; i < outerArray.length; i++) {
             outerArray[i] = Array(this.columns)
         }
 
-        for(let i = 0 ; i<this.rows; i++) {
-            for(let j =0  ; j< this.columns ; j++) {
-                outerArray[i][j] = <div className='cell' key={i+'-'+j}></div>
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.columns; j++) {
+                outerArray[i][j] = <div className='cell' key={i + '-' + j}></div>
             }
         }
 
@@ -26,7 +26,7 @@ class Grid extends React.Component {
 
     render() {
         return (
-            <div className='grid'>{this.generateAllCells(this.rows, this.columns)}</div>
+            <div className='grid'>{this.generateAllCells()}</div>
         )
     }
 }
