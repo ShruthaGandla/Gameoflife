@@ -6,11 +6,9 @@ import Grid from './components/Grid';
 class App extends React.Component{
   render(){
     return (
-      <div className='Test'> < Grid/></div>
+      <div> < Grid/></div>
     )
   }
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// console.log('hello')

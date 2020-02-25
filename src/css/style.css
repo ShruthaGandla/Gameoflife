@@ -16,3 +16,10 @@
     margin-bottom: -1px; 
   }
     
+  .off {
+    background-color: lightgray;
+  }
+  
+  .on {
+    background-color: green;
+  }
