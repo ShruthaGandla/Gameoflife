@@ -3,7 +3,6 @@
     width: 1600px;
     /* remove the gap between two rows */
     line-height: 0;
-    background-color: pink;
   }
 
   .cell {
@@ -14,12 +13,13 @@
     /* helps to remove the overlap of margins among adjacent cells */
     margin-left: -1px;
     margin-bottom: -1px; 
+
   }
-    
-  .off {
-    background-color: lightgray;
+
+  .dead {
+    background-color: grey;
   }
-  
-  .on {
-    background-color: green;
+
+  .alive {
+    background-color: pink;
   }
